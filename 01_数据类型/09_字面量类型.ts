@@ -1,4 +1,4 @@
-let zh: 'china'; // 类型为 china
+let zh: 'china';    // 类型为 china
 let en: 'america'; // 类型为 america
 
 // zh = 'britain';     //报错，只支持输入 china
@@ -18,5 +18,7 @@ function toDirection(direction: Direction) {
 }
 toDirection('left');
 // toDirection('100');   // 报错
+
+
 
 export {};
