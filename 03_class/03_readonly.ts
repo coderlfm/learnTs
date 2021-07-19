@@ -1,7 +1,11 @@
+/* 
+当我们给类中的
+*/
 {
   class Student {
-    public name: string;
-    public readonly grade: string;
+    name: string;
+    readonly grade: string;
+    // 如果 可见性修饰符 和 只读修饰符 同时出现，则 readonly 放在可见性修饰符后面
 
     constructor(name: string, grade: string) {
       this.name = name;
