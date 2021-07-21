@@ -64,21 +64,24 @@
 {
   class Person {
     public name: string;
-    private nation = '中国';
-    protected sex: string; // protected 修饰的属性可以在子类中访问，但是实例上不可以访问
+    protected sex: string = '男'; // protected 修饰的属性可以在子类中访问，但是实例上不可以访问
 
-    constructor(name: string, sex: string) {
+    constructor(name: string) {
       this.name = name;
-      this.sex = sex;
     }
   }
 
   class Man extends Person {
     constructor(name: string) {
-      super(name, 'man');
+      super(name);
+    }
+
+    saySex() {
+      console.log(this.sex);    // 子类可以访问父类中用 protected 修饰的成员
     }
   }
 
   const man = new Man('小明');
+  man.saySex(); // 男
   // man.sex = 'woman'; // ts 语法报错，实例不能访问受保护的类型属性或方法
 }

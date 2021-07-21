@@ -33,7 +33,7 @@
 
 {
   interface IInfo {
-    [age: number]: string;
+    [id: number]: string;
   }
 
   const info: IInfo = {
@@ -43,7 +43,7 @@
 }
 
 /* 
-  那如果我们需要让对象中的值支持多种类型，我们可以使用联合类型
+  如果我们需要让对象中的值支持多种类型，我们可以使用联合类型
 */
 {
   interface IInfo {
@@ -61,13 +61,13 @@
 }
 
 /* 
-只读索引类型
+只读索引签名
 当我们 使用 readonly 来修饰索引类型的时候，可以防止这个对象被修改
 */
 
 {
   interface IInfo {
-    readonly [name: string]: string; // 同时支持字符串和布尔值类型
+    readonly [name: string]: string; 
   }
 
   function getInfo(): IInfo {
