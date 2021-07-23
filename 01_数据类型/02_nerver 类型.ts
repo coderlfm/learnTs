@@ -27,3 +27,8 @@ function handleMessage (message: string | number | boolean) {
 handleMessage(123);
 handleMessage('hello');
 handleMessage(true);
+
+/* 
+`never` 类型可分配给任意一个类型; 但是，没有类型可以分配给`never`（除了 `never` 自己）
+`never` 可以作为所有类型的子类型，这一点很重要
+*/

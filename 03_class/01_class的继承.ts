@@ -1,6 +1,6 @@
 /* 
 TypeScript 中也有类的概念，
-TODO: 基本类的实现
+TODO: 基本类的使用
 */
 
 class Person {

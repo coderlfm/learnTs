@@ -115,6 +115,11 @@ TODO: 此处需要注意 如果是两个 接口类型进行交叉，则会将它
 
 {
   type Info = { age: number } | { age: never; [key: string]: string };
-
+  // type Info = { age: numbefr } | { age: never; [key: string]: string };
+  // type Info = { age:number } | Record<string, string>
+  // interface Info<T=string> {
+  //   age:number;
+  //   [key:string]:T
+  // }
   const info: Info = { age: 1, name: '小明' };
 }
