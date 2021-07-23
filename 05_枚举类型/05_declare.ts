@@ -3,6 +3,6 @@
 */
 
 {
-
   $('#id').addClass('show'); // ok
+  loaddash.join(['a', 'b', 'c']);
 }
