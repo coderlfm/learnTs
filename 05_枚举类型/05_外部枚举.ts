@@ -11,4 +11,4 @@ function work(day: Day) {
 
 work(0);
 
-// console.log(Day.SUNDAY);
+console.log(Day.SUNDAY);

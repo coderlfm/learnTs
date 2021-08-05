@@ -36,11 +36,11 @@ function toDirection(direction: Direction) {
   }
 }
 
-toDirection(Direction.BOTTOM);
+toDirection(Direction.BOTTOM); // nottom
 
 console.log(Direction.TOP); // 0
 
-console.log(Direction.TOP === 0);
+console.log(Direction.TOP === 0); // true
 
 /* 
 
@@ -88,5 +88,4 @@ var Direction;
         Direction[Direction["BOTTOM"] = 2] = "BOTTOM";
     })(Direction || (Direction = {}))
   */
-  
 }
