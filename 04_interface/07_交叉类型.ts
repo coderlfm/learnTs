@@ -52,9 +52,14 @@
   // 交叉操作符优先级高于联合操作符
   type UnionIntersectionA = ({ id: number } & { name: string }) | ({ id: string } & { name: number });
   type UnionIntersectionB = ('px' | 'em' | 'rem' | '%') | ('vh' | 'em' | 'rem' | 'pt'); // 调整优先级
-
+  
+  
+  // 这里需要注意的是这里，UnionIntersectionA 的联合结果为 { id: number, name: string } | { id: string, name: number }
+  // 所以当 id 为 number 的时候，name 就必须是 name
   let union1: UnionIntersectionA = { id: '1', name: 1 };
-  let union2: UnionIntersectionB = 'em';
+  let union2: UnionIntersectionA = { id: 1, name: '小明' };
+  // let union3: UnionIntersectionA = { id: 1, name: 1 };      // ts(2322) 错误
+  let union5: UnionIntersectionB = 'em';
 }
 
 {
@@ -115,11 +120,6 @@ TODO: 此处需要注意 如果是两个 接口类型进行交叉，则会将它
 
 {
   type Info = { age: number } | { age: never; [key: string]: string };
-  // type Info = { age: numbefr } | { age: never; [key: string]: string };
-  // type Info = { age:number } | Record<string, string>
-  // interface Info<T=string> {
-  //   age:number;
-  //   [key:string]:T
-  // }
+
   const info: Info = { age: 1, name: '小明' };
 }
