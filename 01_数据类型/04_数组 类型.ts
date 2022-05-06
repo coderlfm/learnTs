@@ -15,4 +15,4 @@ const info: {
 
 // info.sex
 
-export = { };
+export  { };
