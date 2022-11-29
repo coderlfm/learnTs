@@ -13,22 +13,38 @@ function info(name: string, age: number): void;
 function info(name: string, age?: number) {
   console.log('name:', name);
   console.log('age:', age);
+  
 }
 
 info('ts');
 info('ts', 18);
 
-// function convert(x: string): number;
-// function convert(x: number): string;
-// function convert(x: null): -1;
-// function convert(x: string | number | null): any {
-//     if (typeof x === 'string') {
-//         return Number(x);
-//     }
-//     if (typeof x === 'number') {
-//         return String(x);
-//     }
-//     return -1;
-// }
+function convert(x: string): number;
+function convert(x: number): string;
+function convert(x: null): -1;
+function convert(x: string | number | null): any {
+    if (typeof x === 'string') {
+        return Number(x);
+    }
+    if (typeof x === 'number') {
+        return String(x);
+    }
+    return -1;
+}
+
+function fn(name: string): string;
+function fn(name: number): number;
+function fn(name: boolean): boolean;
+function fn(name: string | number | boolean):any {
+  if (typeof name === "string") {
+    return "1";
+  } else if (typeof name === "number") {
+    return 1;
+  } else if (typeof name === "boolean") {
+    return true;
+  } else {
+    return ;
+  }
+}
 
 export {};

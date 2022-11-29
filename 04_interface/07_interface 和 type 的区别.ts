@@ -20,4 +20,30 @@ const info: IInfo = {
   name: '小明',
 };
 
+class A {
+  name:'xxx'
+}
+
+function createA() {
+  return new A()
+}
+
+const a = createA()
+
+{
+  
+  type AA = Record<string, number>
+  const fn = <T extends AA = {}, K = T>(params: K) => {
+    const a = <K>{ };
+    a['b'] = 111
+    
+    return a;
+  }
+  
+  const res = fn({ b: 100 })
+  res.b
+  
+  // res.a;
+}
+
 export {};

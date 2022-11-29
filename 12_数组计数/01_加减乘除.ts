@@ -15,6 +15,7 @@ type res1 = BuildArray<6>;
 
 // 减法
 // 先构建出 减数 长度的数组， 然后再构建出 被减数的数组，那么剩下的就是结果了
+// 数组中的这种判断一定会进入判断，不会走到false
 type Subtract<Num1 extends number, Num2 extends number> = BuildArray<Num1> extends [...BuildArray<Num2>, ...infer Rest]
   ? Rest['length']
   : never;
