@@ -46,3 +46,11 @@ type TotalFunc = (a1) => number;
 const foo7: voidFunc = () => {
   return 123;   // 语法不对，但是ts会忽略该返回值类型
 };
+
+
+// const foo8:
+//   <T extends number, P extends number>(p1: T, p2: P) => number =
+//   <T extends number, P extends number>(p1: T, p2 = '1' as P) => {
+  
+//   return 123;
+// };

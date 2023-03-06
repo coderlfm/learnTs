@@ -8,6 +8,19 @@ type UpPercaseKey<T extends object> = {
   [Key in keyof T as Uppercase<Key & string>]: T[Key];
 };
 
+// 
+type type2 = 'aa' | 'bb' | 'cc';
+type UpPercaseKey2<T extends string> = Record<Uppercase<T>,string>
+
+/**
+type test3 = {
+    AA: string;
+    BB: string;
+    CC: string;
+}
+ */
+type test3 = UpPercaseKey2<type2>;
+
 // Record
 
 // 转换成只读

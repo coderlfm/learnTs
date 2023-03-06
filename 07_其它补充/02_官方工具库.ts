@@ -8,6 +8,11 @@ interface Person {
 }
 type PartialPerson = Partial<Person>;
 
+// 如果第一个参数满足第二个的类型，则将满足的整个类型提出
+type test = Extract<string, Person['name']>
+// 将满足第二个参数的类型剔除
+type test2 = Exclude<string | boolean, string>; 
+
 // 相当于
 // interface PartialPerson {
 //   name?: string;
